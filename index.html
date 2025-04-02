@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Progga Recommends</title>
+  <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+ 
+</head>
+<body>
+
+  <div class="cover">
+    <h1>Progga's Picks</h1>
+  </div>
+
+  <div class="intro">
+    <p>Choose your genre to explore: Fantasy, Manga, Myth, or Sci-Fi.</p>
+  </div>
+
+  <div class="card-container">
+    <div class="card" onclick="openModal('Fantasy')">
+      <img src="images/Fantasy.jpg" alt="Fantasy" class="card-image">
+    </div>
+    <div class="card" onclick="openModal('Manga')">
+      <img src="images/Manga.jpg" alt="Fantasy" class="card-image">
+    </div>
+    <div class="card" onclick="openModal('Myth')">
+      <img src="images/Mythology.jpg" alt="Fantasy" class="card-image">
+    </div>
+    <div class="card" onclick="openModal('Sci-Fi')">
+      <img src="images/Sci-fi.jpg" alt="Fantasy" class="card-image">
+    </div>
+  </div>
+
+
+
+  <div class="modal" id="genreModal">
+    <div class="modal-content" id="modalContent">
+      <h2 id="modalTitle"></h2>
+      <img id="modalImage" src="" alt="Genre Image" class="active">
+      <div class="nav-buttons">
+        <button onclick="prevImage()">← Previous</button>
+        <button onclick="nextImage()">Next →</button>
+      </div>
+    </div>
+    <button class="close-btn" onclick="closeModal()">Close</button>
+  </div>
+  
+
+  <div class="links">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
+
+  <script>
+const images = {
+  'Fantasy': ['images/fantasy1.jpg', 'images/fantasy2.jpg', 'images/fantasy3.jpg'],
+  'Manga': ['images/manga1.jpg', 'images/manga2.jpg', 'images/manga3.jpg'],
+  'Myth': ['images/myth1.jpg', 'images/myth2.jpg', 'images/myth3.jpg'],
+  'Sci-Fi': ['images/scifi1.jpg', 'images/scifi2.jpg', 'images/scifi3.jpg']
+};
+
+let currentGenre = '';
+let currentIndex = 0;
+
+function openModal(genre) {
+  currentGenre = genre;
+  currentIndex = 0;
+  const modal = document.getElementById('genreModal');
+  const modalTitle = document.getElementById('modalTitle');
+  const modalImage = document.getElementById('modalImage');
+
+  modalTitle.textContent = genre;
+  modalImage.src = images[genre][currentIndex];
+  modal.style.display = 'flex';
+}
+
+function closeModal() {
+  document.getElementById('genreModal').style.display = 'none';
+}
+
+function nextImage() {
+  if (currentIndex < images[currentGenre].length - 1) {
+    currentIndex++;
+  } else {
+    currentIndex = 0;
+  }
+  updateModalImage();
+}
+
+function prevImage() {
+  if (currentIndex > 0) {
+    currentIndex--;
+  } else {
+    currentIndex = images[currentGenre].length - 1;
+  }
+  updateModalImage();
+}
+
+function updateModalImage() {
+  const modalImage = document.getElementById('modalImage');
+  modalImage.src = images[currentGenre][currentIndex];
+}
+
+  </script>
+
+</body>
+</html>
