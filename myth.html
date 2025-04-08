@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mythology World</title>
+  <link rel="stylesheet" href="SharedStyle.css">
+</head>
+<body>
+  <h1>Mythology World</h1>
+  <div class="backPic">
+  <div class="card-container">
+    <div class="card-box">
+      <div class="card" onclick="toggleImage('elf')">
+        <img src="images/Myth 1.JPG" class="card-image">
+        
+      </div>
+      <div class="card-details-image" id="elf">
+        <img src="images/MyE1.jpg" alt="Elf Scene">
+      </div>
+    </div>
+
+    <div class="card-box">
+      <div class="card" onclick="toggleImage('dragon')">
+        <img src="images/Myth 2.JPG" class="card-image">
+        
+      </div>
+      <div class="card-details-image" id="dragon">
+        <img src="images/MyE2.jpg" alt="Dragon Scene">
+      </div>
+    </div>
+
+    <div class="card-box">
+      <div class="card" onclick="toggleImage('wizard')">
+        <img src="images/Myth 3.jpg" class="card-image">
+        
+      </div>
+      <div class="card-details-image" id="wizard">
+        <img src="images/MyE3.jpg" alt="Wizard Scene">
+      </div>
+    </div>
+
+    <div class="card-box">
+      <div class="card" onclick="toggleImage('castle')">
+        <img src="images/Myth 4.jpg" class="card-image">
+      
+      </div>
+      <div class="card-details-image" id="castle">
+        <img src="images/MyE4.jpg" alt="Castle Scene">
+      </div>
+    </div>
+  </div>
+
+  <div class="back-link">
+    <a href="index.html">← Back to Home</a>
+  </div>
+</div>  
+  <script>
+    function toggleImage(id) {
+      const imageBox = document.getElementById(id);
+      const isVisible = imageBox.style.display === 'block';
+
+      // Hide all other image boxes
+      document.querySelectorAll('.card-details-image').forEach(div => {
+        div.style.display = 'none';
+      });
+
+      // Show the clicked one
+      if (!isVisible) {
+        imageBox.style.display = 'block';
+      }
+    }
+  </script>
+</body>
+</html>

@@ -6,16 +6,24 @@ body {
 }
 
 .cover {
-  background-image: url('https://via.placeholder.com/1200x300');
+  background-image: url('images/TitleBCover.jpg');
   background-size: cover;
   color: black;
   padding: 60px 20px;
   text-align: center;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+font-weight: bold;
+  
+}
+.backPic {
+  background-image: url('images/backCover1.jpg');
+
 }
 
 .intro {
   text-align: center;
+  font-family: 'Playfair Display', serif;
   padding: 20px;
   font-size: 1.2em;
 }

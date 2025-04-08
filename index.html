@@ -7,13 +7,18 @@
  
 </head>
 <body>
+  <div class="backPic">
 
   <div class="cover">
-    <h1>Progga's Picks</h1>
+    <h1>   .........PROGGA's PICKS</h1>
   </div>
 
   <div class="intro">
-    <p>Choose your genre to explore: Fantasy, Manga, Myth, or Sci-Fi.</p>
+    <p>Welcome to Progga's Picks – Your Next Great Read Awaits!
+
+      Not sure what to read next ? We’ve got you covered! Whether you crave epic adventures, mind-bending sci-fi, legendary myths, or captivating manga, our carefully curated book recommendations will point you in the right direction.
+      
+      Click on a genre, explore our top picks, and discover your next obsession. Happy reading</p>
   </div>
 
   <div class="card-container">
@@ -24,36 +29,24 @@
     <div class="card"><a href="manga.html" >
       <img src="images/Manga.jpg" alt="Manga" class="card-image">
     </a></div>
-  
-
-    <div class="card" onclick="openModal('Myth')">
-      <img src="images/Mythology.jpg" alt="Fantasy" class="card-image">
-    </div>
-    <div class="card" onclick="openModal('Sci-Fi')">
-      <img src="images/Sci-fi.jpg" alt="Fantasy" class="card-image">
-    </div>
+    <div class="card"><a href="myth.html" >
+      <img src="images/Mythology.jpg" alt="Manga" class="card-image">
+    </a></div>
+    <div class="card"><a href="scifi.html" >
+      <img src="images/Sci-fi.jpg" alt="Manga" class="card-image">
+    </a></div>
   </div>
 
 
 
-  <div class="modal" id="genreModal">
-    <div class="modal-content" id="modalContent">
-      <h2 id="modalTitle"></h2>
-      <img id="modalImage" src="" alt="Genre Image" class="active">
-      <div class="nav-buttons">
-        <button onclick="prevImage()">← Previous</button>
-        <button onclick="nextImage()">Next →</button>
-      </div>
-    </div>
-    <button class="close-btn" onclick="closeModal()">Close</button>
-  </div>
-  
 
   <div class="links">
-    <a href="#">Link 1</a>
+    <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#search/progga/FMfcgzQZTqBMjSSgLGfhRlMTGmVJTKlf">Link 1</a>
     <a href="#">Link 2</a>
     <a href="#">Link 3</a>
   </div>
+
+</div>
 
   <script>
 const images = {

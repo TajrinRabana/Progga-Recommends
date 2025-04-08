@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Science Fiction World</title>
+  <link rel="stylesheet" href="SharedStyle.css">
+</head>
+<body>
+  <h1>Science Fiction World</h1>
+  <div class="backPic">
+  <div class="card-container">
+    <div class="card-box">
+      <div class="card" onclick="toggleImage('elf')">
+        <img src="images/Sci-fi 1.JPG" class="card-image">
+        
+      </div>
+      <div class="card-details-image" id="elf">
+        <img src="images/SF 1.jpg" alt="Elf Scene">
+      </div>
+    </div>
+
+    <div class="card-box">
+      <div class="card" onclick="toggleImage('dragon')">
+        <img src="images/Sci-fi 2.jpg" class="card-image">
+        
+      </div>
+      <div class="card-details-image" id="dragon">
+        <img src="images/SF 2.jpg" alt="Dragon Scene">
+      </div>
+    </div>
+
+    <div class="card-box">
+      <div class="card" onclick="toggleImage('wizard')">
+        <img src="images/Sci-fi 3.JPG" class="card-image">
+        
+      </div>
+      <div class="card-details-image" id="wizard">
+        <img src="images/SF 3.jpg" alt="Wizard Scene">
+      </div>
+    </div>
+
+    <div class="card-box">
+      <div class="card" onclick="toggleImage('castle')">
+        <img src="images/Sci-fi 4.JPG" class="card-image">
+      
+      </div>
+      <div class="card-details-image" id="castle">
+        <img src="images/SF 4.jpg" alt="Castle Scene">
+      </div>
+    </div>
+  </div>
+
+  <div class="back-link">
+    <a href="index.html">← Back to Home</a>
+  </div>
+</div>
+  <script>
+    function toggleImage(id) {
+      const imageBox = document.getElementById(id);
+      const isVisible = imageBox.style.display === 'block';
+
+      // Hide all other image boxes
+      document.querySelectorAll('.card-details-image').forEach(div => {
+        div.style.display = 'none';
+      });
+
+      // Show the clicked one
+      if (!isVisible) {
+        imageBox.style.display = 'block';
+      }
+    }
+  </script>
+</body>
+</html>
