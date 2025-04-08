@@ -79,10 +79,22 @@ cursor: pointer;
 }
 
 .back-link a {
-  text-decoration: none;
-  color: #0077cc;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #d0e344;
+  color: rgb(11, 0, 0);
   font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
+
+.back-link a:hover {
+  background-color: #a38800;
+  transform: translateY(-2px);
+}
+
 
 .card img.card-image {
 width: 100%;
