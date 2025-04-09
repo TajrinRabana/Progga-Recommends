@@ -8,7 +8,7 @@ body {
 .cover {
   background-image: url('images/TitleBCover.jpg');
   background-size: cover;
-  color: black;
+  color: rgb(11, 3, 0);
   padding: 60px 20px;
   text-align: right;
   padding-right: 190px;
@@ -28,7 +28,7 @@ font-weight: bold;
   font-family: 'Playfair Display', serif;
   padding: 20px;
   font-size: 1.2em;
-  font-weight: bold;
+ 
 }
 
 .card-container {
@@ -102,6 +102,10 @@ font-weight: bold;
   text-decoration: none;
   font-family: 'Playfair Display', serif;
   font-weight: bold;
+}
+.links a:hover {
+  color: #85730f; /* or whatever color you like */
+  transform: translateY(-2px);
 }
 .card img.card-image {
     width: 100%;
